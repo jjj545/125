@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>活動專頁｜銀行點數全面升級！</title>
+  
+  <!-- AOS 動畫 CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- TypeIt 打字動畫 -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
+  <!-- AOS 動畫 JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #121212;
+      font-family: "微軟正黑體", sans-serif;
+      color: #ddd;
+    }
+    header {
+      background: #1e1e1e;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      color: #00bcd4;
+      margin-bottom: 1rem;
+    }
+    header p {
+      color: #ccc;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    #countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #4caf50;
+      margin-top: 1rem;
+    }
+    section {
+      background: #1a1a1a;
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    }
+    h2 {
+      color: #ff4081;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+    }
+    ul, p {
+      line-height: 1.7;
+      color: #ccc;
+    }
+    .highlight {
+      color: #00bcd4;
+      font-weight: bold;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .cta button {
+      background: #ff4081;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .cta button:hover {
+      background: #e91e63;
+      transform: scale(1.05);
+    }
+    iframe {
+      width: 100%;
+      height: 1000px;
+      border: none;
+      margin-top: 2rem;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="typed-title"></h1>
+    <p>
+      親愛的夥伴們，為了讓大家的點數更具價值，我們特別推出<br />
+      <span class="highlight">「原紙本點數全面升級為銀行點」</span> 的超值活動！趕快參加吧！
+    </p>
+    <div id="countdown">倒數中...</div>
+  </header>
+
+  <section data-aos="fade-up">
+    <h2>🎯 活動主題</h2>
+    <ul>
+      <li>🔹 以 <span class="highlight">100（紙本點）:1（銀行點）</span> 的比率，全面轉換。</li>
+      <li>🔹 新系統上線後，所有紙本點數將自動轉換，更便利彈性！</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>📅 活動期間</h2>
+    <p>即日起至 <span class="highlight">8 月底</span>，敬請把握機會！</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>📣 活動說明與特色</h2>
+    <ul>
+      <li>🔸 <strong>銀行點數功能升級：</strong> 用於兌換、抽獎、報名等。</li>
+      <li>🔸 <strong>會員制度新登場：</strong>
+        <ul>
+          <li>✅ <strong>專屬折扣：</strong> 合作商家優惠。</li>
+          <li>✅ <strong>點數利息：</strong> 存入享回饋。</li>
+        </ul>
+      </li>
+      <li>🔸 每日抽獎活動＋小政策＋富豪榜挑戰！</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>💡 如何參加</h2>
+    <ul>
+      <li>✅ 系統將自動轉換紙本點數。</li>
+      <li>✅ 成為會員享受完整福利。</li>
+      <li>✅ 聯繫 <span class="highlight">詹凡葦</span> 獲取協助。</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>📋 活動報名表</h2>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSe9M-ptQx9EFxszdGl_rFEjypyZ9ThCG7RiGo0poVRdw6VZ0g/viewform?embedded=true" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0"
+      ></iframe>
+  </section>
+
+  <section class="cta" data-aos="fade-up">
+    <button onclick="alert('敬請聯繫詹凡葦以了解更多！')">立即參加</button>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>🚀 準備好了嗎？</h2>
+    <p>🎉 趕快行動，享受會員尊榮特權與驚喜獎勵吧！</p>
+  </section>
+
+  <script>
+    // 倒數計時器
+    const countdownEl = document.getElementById("countdown");
+    const endDate = new Date("2025-08-31T23:59:59").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = endDate - now;
+      if (distance < 0) {
+        countdownEl.textContent = "🎉 活動已結束，感謝參與！";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownEl.textContent = `活動倒數：${days} 天 ${hours} 時 ${minutes} 分 ${seconds} 秒`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 初始化 AOS 動畫
+    AOS.init();
+
+    // 首頁標題打字動畫
+    new TypeIt("#typed-title", {
+      speed: 80,
+      loop: false,
+    }).type("🌟🌟 全新活動盛大登場！ 🌟🌟").go();
+  </script>
+
+</body>
+</html>
